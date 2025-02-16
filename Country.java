@@ -1,9 +1,14 @@
 /**
- * Represents a country and manages its collection of cities.
- * Provides functionality for city management, statistical calculations,
- * and geographical comparisons between cities.
- *
- * @author Shimon.Esterkin207972258
+ * The Country class represents a national administrative entity managing multiple cities.
+ * This class provides comprehensive functionality for city collection management,
+ * statistical analysis, and geographical relationships between urban centers.
+ * 
+ * The class manages a collection of up to 1000 cities, maintaining their data
+ * and providing operations for city administration, population statistics,
+ * and geographical analysis. It serves as a container and manager for City objects,
+ * facilitating complex operations across multiple urban centers.
+ * 
+ * @author Shimon Esterkin (207972258)
  * @version Maman14.2023b
  */
 public class Country {
