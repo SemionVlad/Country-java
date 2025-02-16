@@ -5,32 +5,12 @@
 **Version:** Maman14.2023b
 
 ## Dependencies
-This class requires additional classes that should be included in your project:
+This class requires the following classes:
 - [City Class](link-to-city-repository) - For managing individual cities
 - [Point Class](link-to-point-repository) - For handling geographical coordinates (used by City)
-- [Date Class](link-to-date-repository) - For managing establishment dates (used by City)
 
 ## Overview
-The Country class provides a comprehensive system for managing and analyzing a collection of cities within a country. It supports city administration, geographical analysis, and population statistics. The system can handle up to 1000 cities per country.
-
-## Features
-
-### 1. City Management
-- Add new cities with full details
-- Unify two existing cities
-- Track number of cities
-- Maintain city information
-
-### 2. Geographic Analysis
-- Find cities north of a reference city
-- Identify southernmost city
-- Calculate maximum distance between cities
-- Track city centers and stations
-
-### 3. Statistical Functions
-- Calculate total population
-- Track number of neighborhoods
-- Monitor city growth and changes
+The Country class provides a comprehensive system for managing and analyzing a collection of cities. It offers functionality for city administration, geographical analysis, and population statistics, with support for up to 1000 cities per country.
 
 ## Class Structure
 ```
@@ -42,13 +22,34 @@ Country.java
 │   ├── _cities (City[])
 │   └── _noOfCities (int)
 └── Method Groups
-    ├── Constructors
     ├── Basic Getters
     ├── City Management
     ├── Statistical Methods
     ├── Geographical Methods
     └── Object Methods
 ```
+
+## Features
+
+### 1. City Management
+- Add new cities with:
+  - Name
+  - City center coordinates
+  - Central station coordinates
+  - Population
+  - Number of neighborhoods
+- Unify two existing cities
+- Maintain city collection
+
+### 2. Statistical Analysis
+- Calculate total country population
+- Track number of cities
+- Calculate distances between cities
+
+### 3. Geographical Functions
+- Find cities north of a reference city
+- Identify southernmost city
+- Calculate maximum distance between cities
 
 ## Usage Examples
 
@@ -57,113 +58,96 @@ Country.java
 Country israel = new Country("Israel");
 ```
 
-### Adding Cities
+### Managing Cities
 ```java
-israel.addCity("Tel Aviv", 32, 34,    // City center coordinates
-               32, 34,                 // Station coordinates
-               460613,                 // Population
-               9);                     // Neighborhoods
+// Add a new city
+israel.addCity("Tel Aviv", 
+              32, 34,          // City center coordinates
+              32, 34,          // Station coordinates
+              460613,          // Population
+              9);             // Neighborhoods
 
-israel.addCity("Jerusalem", 31, 35,    // City center coordinates
-               31, 35,                 // Station coordinates
-               936425,                 // Population
-               15);                    // Neighborhoods
-```
-
-### City Analysis
-```java
-// Find cities north of reference
+// Find northern cities
 String northernCities = israel.citiesNorthOf("Tel Aviv");
 
 // Get southernmost city
 City southmost = israel.southernmostCity();
 
-// Calculate maximum distance between cities
-double maxDist = israel.longestDistance();
-
-// Get total population
-long totalPop = israel.getNumOfResidents();
-```
-
-### City Unification
-```java
-// Merge two cities
+// Unify cities
 City unifiedCity = israel.unifyCities("Tel Aviv", "Jaffa");
 ```
 
 ## Implementation Details
 
-### Constraints
-1. City Limits
-   - Maximum 1000 cities per country
-   - Each city must have at least 1 neighborhood
-   - Population must be non-negative
+### City Management
+- Maximum 1000 cities per country
+- Deep copying of city objects
+- Safe city unification process
+- Automatic array management
 
-2. Data Management
-   - Deep copying for object safety
-   - Null handling for missing cities
-   - Array management for city removal
+### Geographical Analysis
+- Uses Point class for coordinates
+- North/south relationship tracking
+- Distance calculations between cities
+- City center comparisons
 
 ### Error Handling
-- Returns null for non-existent cities
-- Returns false when adding to full country
-- Validates all numerical inputs
+- Bounds checking for city array
+- Null checking for city names
+- Population validation
+- Safe array manipulation
 
-## Testing Recommendations
+## Method Descriptions
 
-### 1. Basic Operations
-```java
-// Test city addition
-boolean added = country.addCity(...);
-assert country.getNumCities() == 1;
+### Basic Operations
+- `getCountryName()` - Returns country name
+- `getNumCities()` - Returns number of cities
+- `getCities()` - Returns deep copy of cities array
 
-// Test population calculation
-long population = country.getNumOfResidents();
-assert population >= 0;
-```
+### City Management
+- `addCity(...)` - Adds new city
+- `unifyCities(...)` - Merges two cities
 
-### 2. Geographic Operations
-```java
-// Test north/south relationships
-String northCities = country.citiesNorthOf("CityName");
-City southCity = country.southernmostCity();
-```
-
-### 3. City Unification
-```java
-// Test city merging
-City unified = country.unifyCities("City1", "City2");
-assert unified != null;
-```
+### Analysis
+- `getNumOfResidents()` - Total population
+- `longestDistance()` - Maximum city distance
+- `citiesNorthOf(...)` - Northern cities
+- `southernmostCity()` - Southernmost city
 
 ## Performance Considerations
-- O(1) for adding cities
-- O(n) for city searches
-- O(n²) for distance calculations
-- Efficient memory management with array resizing
+- O(1) city addition
+- O(n) city searches
+- O(n²) distance calculations
+- Efficient array management
+
+## Testing Guidelines
+1. City Management
+   - Adding cities
+   - City capacity limits
+   - City unification
+
+2. Geographical Analysis
+   - North/south relationships
+   - Distance calculations
+   - City locations
+
+3. Population Statistics
+   - Total population
+   - Resident counting
+   - Demographic updates
 
 ## Known Limitations
 1. Fixed maximum city capacity (1000)
-2. No direct city removal (except through unification)
-3. Linear search for city names
-4. No support for multiple central stations
+2. No direct city removal
+3. Linear city searches
+4. Basic distance calculations
 
 ## Future Enhancements
 - Dynamic array sizing
-- Direct city removal capability
-- Advanced search capabilities
-- Multiple station support
-- Population density analysis
+- Direct city removal
+- Improved search algorithms
+- Advanced statistical analysis
 - Geographic clustering
 
-## Contributing
-1. Fork the repository
-2. Create your feature branch
-3. Test thoroughly
-4. Submit pull request
-
-## License
-This project is part of academic coursework at [Your Institution].
-
 ---
-*Note: This implementation is part of a programming assignment demonstrating object-oriented programming concepts in Java.*
+*Note: This implementation is part of an academic project (Maman14) demonstrating object-oriented programming concepts in Java.*
