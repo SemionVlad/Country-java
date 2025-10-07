@@ -1,8 +1,8 @@
 # Country Management System
 ## National Urban Data Management and Analysis
 
-**Author:** Shimon Esterkin (207972258)  
-**Version:** Maman14.2023b
+**Author:** Shimon Esterkin (*****2258)  
+**Version:** Maman14.2025b
 
 ## Dependencies
 This class requires the following classes:
@@ -149,5 +149,8 @@ City unifiedCity = israel.unifyCities("Tel Aviv", "Jaffa");
 - Advanced statistical analysis
 - Geographic clustering
 
+## 📄 License
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ---
-*Note: This implementation is part of an academic project (Maman14) demonstrating object-oriented programming concepts in Java.*
+Created by [SemionVlad](https://github.com/SemionVlad) for academic and portfolio purposes. This repository is intended for **non-commercial**, **educational** sharing only.
