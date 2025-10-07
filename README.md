@@ -1,7 +1,7 @@
 # Country Management System (National Urban Data Management and Analysis)
 
 ## Author
-- **Name**: Shimon Esterkin  
+- **Name**: Shimon Esterkin ([SemionVlad](https://github.com/SemionVlad))
 - **ID**: *****2258  
 - **Semester**: 2023B
 
@@ -150,8 +150,9 @@ City unifiedCity = israel.unifyCities("Tel Aviv", "Jaffa");
 - Advanced statistical analysis
 - Geographic clustering
 
+---
+
 ## 📄 License
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
----
 Created by [SemionVlad](https://github.com/SemionVlad) for academic and portfolio purposes. This repository is intended for **non-commercial**, **educational** sharing only.
