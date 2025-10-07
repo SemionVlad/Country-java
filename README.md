@@ -1,8 +1,11 @@
-# Country Management System
-## National Urban Data Management and Analysis
+# Country Management System (National Urban Data Management and Analysis)
 
-**Author:** Shimon Esterkin (*****2258)  
-**Version:** Maman14.2025b
+## Author
+- **Name**: Shimon Esterkin  
+- **ID**: *****2258  
+- **Course**: System Programming Laboratory (20465)  
+- **Semester**: 2025A
+
 
 ## Dependencies
 This class requires the following classes:
