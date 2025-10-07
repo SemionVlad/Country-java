@@ -3,9 +3,7 @@
 ## Author
 - **Name**: Shimon Esterkin  
 - **ID**: *****2258  
-- **Course**: System Programming Laboratory (20465)  
 - **Semester**: 2023B
-
 
 ## Dependencies
 This class requires the following classes:
