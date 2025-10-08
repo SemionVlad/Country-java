@@ -1,4 +1,12 @@
 # Country Management System (National Urban Data Management and Analysis)
+<!-- Tech badges (static; no CI needed) -->
+![Language: Java](https://img.shields.io/badge/Language-Java-red?logo=java)
+![JDK: 8+](https://img.shields.io/badge/JDK-8%2B-informational)
+![Paradigm: OOP](https://img.shields.io/badge/Paradigm-OOP-4c1)
+![Domain: Geospatial](https://img.shields.io/badge/Domain-Geospatial-0aa)
+![Complexity: O(n²) distances](https://img.shields.io/badge/Complexity-O(n%C2%B2)%20distances-999)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 ## Author
 - **Name**: Shimon Esterkin ([SemionVlad](https://github.com/SemionVlad))
@@ -151,8 +159,4 @@ City unifiedCity = israel.unifyCities("Tel Aviv", "Jaffa");
 - Geographic clustering
 
 ---
-
-## 📄 License
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
 Created by [SemionVlad](https://github.com/SemionVlad) for academic and portfolio purposes. This repository is intended for **non-commercial**, **educational** sharing only.
